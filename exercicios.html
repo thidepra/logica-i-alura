@@ -1,0 +1,73 @@
+<meta charset="UTF-8">
+
+<script>
+    //Testando os exercícios do curso
+    document.write("<br>");
+    document.write("Eu acertei: " + 15 / (50 * 100) + "%"); //errado pois a divisão é feita antes da multiplicação
+    document.write("<br>");
+    document.write("Eu acertei: " + 15 / 50 * 100 + "%");
+    document.write("<br>");
+
+    var idadeLinda = 12;
+    var idadeGuaraciara = 15;
+    var idadePerola = 13;
+    var totalIdades = idadeLinda + idadeGuaraciara + idadePerola;
+
+    document.write(totalIdades / 3);
+
+    var IDADE1 = 10;
+    var IDADE2 = 3;
+    var IDADE3 = 12;
+    document.write("<br>");
+
+    document.write("A média das idades é <br>");
+    document.write((IDADE1 + IDADE2 + IDADE3) / 3);//102012 converte para string
+    document.write("<br>");
+
+    //Exercicios de funções
+    //04-10
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write("**************************************************");
+        pulaLinha();
+        document.write(frase);
+        pulaLinha();
+    }
+
+    mostra("BEM-VINDO AO MEU PROGRAMA");
+    mostra("ELE REALMENTE FUNCIONA");
+    mostra("EU USEI FUNÇÃO PARA FAZER ISSO");
+
+    //04-11
+    function exibeTitulo(titulo) {
+        document.write("<h1>" + titulo + "</h1>");
+        pulaLinha();
+    }
+
+    function exibeParagrafo(paragrafo) {
+        document.write("<p>" + paragrafo + "</p>");
+        pulaLinha();
+    }
+
+    // pede para alguém ler daqui em diante e veja se ele entende o que esta sendo feito
+    exibeTitulo("Bem-vindos");
+    exibeParagrafo("Este é um simples programa");
+    //as funções tem nomes claros e deixa claro o que elas fazem
+
+    //04-12
+    var minhaIdade = 15;
+    var idadeCarlos = 18;
+    var subtracao = idadeCarlos - minhaIdade;
+
+    mostra("Nossa diferença de idade é " + subtracao);
+
+    //04-13
+    var idadeMediaQuandoTemFilhos = 28;
+    var anoAtual = 2024;
+    var quantidadeDeGerações = (anoAtual - 1500) / idadeMediaQuandoTemFilhos;
+    mostra("A quantidade de gerações é " + Math.round(quantidadeDeGerações));
+
+</script>
