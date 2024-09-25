@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc(peso, altura) {
+        return peso / (altura * altura);
+    }
+
+    // SOLUÇÃO SEM INTERAÇÃO COM O USUÁRIO
+    // var imcBianca = calculaImc(82, 1.51).toFixed(2);
+    // var imcJoao = calculaImc(70, 1.70).toFixed(2);
+    // var imcTotal = imcBianca + imcJoao;
+    // outra forma de fazer se o programa pedisse somente a soma dos IMCs
+    // var imcTotal = calculaImc(82, 1.51) + calculaImc(70, 1.70); 
+
+    // mostra("O IMC da Bianca é: " + imcBianca);
+    // mostra("O IMC do João é: " + imcJoao);
+    // mostra("A soma dos IMCs é: " + imcTotal);
+
+    // SOLUÇÃO COM INTERAÇÃO COM O USUÁRIO
+    var nome = prompt("Informe o seu nome: ");
+    var pesoInformado = prompt(nome + ", informe o seu peso: ");
+    var alturaInformada = prompt(nome + ", informe a sua altura: ");
+    var imc = calculaImc(pesoInformado, alturaInformada).toFixed(2);
+
+    mostra(nome + ", o seu IMC é " + imc);
+
+</script>

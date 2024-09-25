@@ -70,4 +70,21 @@
     var quantidadeDeGerações = (anoAtual - 1500) / idadeMediaQuandoTemFilhos;
     mostra("A quantidade de gerações é " + Math.round(quantidadeDeGerações));
 
+    //05-15
+    function a(texto) {
+        return "(" + texto + ")";
+    }
+
+    function b(texto) {
+        return "@" + texto + "@";
+    }
+
+    function c(nome, sobrenome) {
+        return b(nome + " " + a(sobrenome));
+    }
+
+    var resultado = c("Flávio", "Almeida");
+
+    mostra(resultado);
+
 </script>
