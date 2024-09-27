@@ -9,11 +9,11 @@
         return Math.round(Math.random() * 10);
     }
 
-    function sorteiaNumeros(tamanho) {
+    function sorteiaNumeros(quantidade) {
         var segredos = [];
         var contador = 1;
 
-        while (contador <= tamanho) {
+        while (contador <= quantidade) {
             var numeroAleatorio = sorteia();
 
             if (numeroAleatorio !== 0) {
