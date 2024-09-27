@@ -64,13 +64,40 @@
     // mostra("O valor total de gastos nesse mês foi de R$ " + totalGasto + " .");
 
     //09-05: Meu código não é executado
-    var parcelas = [10.40, 40.00, 100.18, 200];
+    // var parcelas = [10.40, 40.00, 100.18, 200];
 
-    for (var i = 0; i < parcelas.length; i++) {
-        document.write(parcelas[i]);
-        document.write("<br>");
+    // for (var i = 0; i < parcelas.length; i++) {
+    //     document.write(parcelas[i]);
+    //     document.write("<br>");
+    // }
+
+    // document.write("FIM");
+
+    //09-11 Não existe ingrediente repetido aqui
+
+    document.write("<h1>Receitas do Yan</h1>");
+
+    var ingredientes = [];
+    var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+    var contador = 1;
+
+    while (contador <= quantidade) {
+        var ingrediente = prompt("Informe o ingrediente " + contador);
+        var repetido = false;
+
+        for (let posicao = 0; posicao < ingredientes.length; posicao++) {
+            if (ingredientes[posicao] == ingrediente) {
+                repetido = true;
+                break;
+            }
+        }
+
+        if (repetido == false) {
+            ingredientes.push(ingrediente);                
+            contador++;
+        }
     }
 
-    document.write("FIM");
+    console.log(ingredientes);
 
 </script>
