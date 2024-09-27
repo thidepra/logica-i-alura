@@ -34,4 +34,12 @@
 
     mostra(nome + ", o seu IMC é " + imc);
 
+    if(imc < 18.5) {
+        mostra("Você está abaixo do recomendado pela OMS!");
+    } else if(imc >= 18.5 && imc <= 29.9) {
+        mostra("Você está de acordo com o recomendado pela OMS!");
+    } else {
+        mostra("Você está acima do recomendado pela OMS!");
+    }
+
 </script>

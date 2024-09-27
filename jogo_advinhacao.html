@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(n) {
+        return numeroSorteado = Math.round(Math.random() * n);
+    }
+
+    var numeroSorteado = sorteia(parseInt(prompt("Informe o número máximo para o Jogo de Advinhação")));
+    console.log(numeroSorteado);
+    var tentativas = 1;
+
+    while (tentativas <= 3) {
+        var chute = parseInt(prompt("Informe o seu chute"));
+    
+        if(chute == numeroSorteado) {
+            mostra("Uhuuu! Você acertou!<br>O número sorteado é " + numeroSorteado + " .");
+            // tentativas = 3;
+            break;
+        } else {
+            mostra("Que pena! Você errou!");
+        }
+        tentativas ++;
+    }
+
+    mostra("FIM");
+
+</script>

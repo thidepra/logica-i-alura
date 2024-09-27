@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+
+    var multiplicando = parseInt(prompt("Informe o número da tabuada que deseja saber"));
+    mostra("Tabuada do " + multiplicando);
+    //inicialização do contador - condição de repetição - incremento do contador
+    for (var multiplicador = 1; multiplicador <= 10; multiplicador ++) {
+        var resultado = multiplicando * multiplicador;        
+        mostra(multiplicando + " x " + multiplicador + " = " + resultado);
+    }
+    
+    mostra("FIM");
+
+</script>
