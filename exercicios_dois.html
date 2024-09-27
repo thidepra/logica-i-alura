@@ -49,18 +49,28 @@
     // alert("Sua idade é " + idade);
 
     //07-13: Media de eventos
-    var totalEventos = parseInt(prompt("Digite o total de eventos desse mês"));
-    var contador = 1;
-    var totalGasto = 0;
+    // var totalEventos = parseInt(prompt("Digite o total de eventos desse mês"));
+    // var contador = 1;
+    // var totalGasto = 0;
 
-    while (contador <= totalEventos) {
-        var valorEvento = parseFloat(prompt("Informe o valor gasto no evento " + contador));
-        totalGasto += valorEvento;
-        contador ++;
+    // while (contador <= totalEventos) {
+    //     var valorEvento = parseFloat(prompt("Informe o valor gasto no evento " + contador));
+    //     totalGasto += valorEvento;
+    //     contador ++;
+    // }
+
+    // var mediaGastos = totalGasto/totalEventos;
+
+    // mostra("O valor total de gastos nesse mês foi de R$ " + totalGasto + " .");
+
+    //09-05: Meu código não é executado
+    var parcelas = [10.40, 40.00, 100.18, 200];
+
+    for (var i = 0; i < parcelas.length; i++) {
+        document.write(parcelas[i]);
+        document.write("<br>");
     }
 
-    var mediaGastos = totalGasto/totalEventos;
-
-    mostra("O valor total de gastos nesse mês foi de R$ " + totalGasto + " .");
+    document.write("FIM");
 
 </script>
