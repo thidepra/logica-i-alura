@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+
+<input />
+<button>Compare com o meu segredo</button>
+
+<script>
+
+    function sorteia() {
+        return Math.round(Math.random() * 10);
+    }
+
+    function sorteiaNumeros(tamanho) {
+        var segredos = [];
+        var contador = 1;
+
+        while (contador <= tamanho) {
+            var numeroAleatorio = sorteia();
+
+            if (numeroAleatorio !== 0) {
+                var achouNumeroRepetido = false;
+
+                for (let posicao = 0; posicao < segredos.length; posicao++) {
+                    if (segredos[posicao] == numeroAleatorio) {
+                        achouNumeroRepetido = true;
+                        break;
+                    }
+                }
+
+                if (achouNumeroRepetido == false) {
+                    segredos.push(numeroAleatorio);
+                    contador++;
+                }
+            }
+        }
+        return segredos;
+    }
+
+    function verifica() {
+        var achou = false;
+        for (let posicao = 0; posicao < segredos.length; posicao++) {
+            if (input.value == segredos[posicao]) {
+                alert("Você acertou!!!");
+                achou = true;
+                break;
+            }
+        }
+
+        if (achou == false) {
+            alert("Você errou!!!!");
+        }
+
+        input.focus(); //deixa o cursor no campo
+        input.value = ""; //limpa valor do campo
+    }
+
+    var segredos = sorteiaNumeros(5);
+    console.log(segredos);
+    //função querySelector ira pega o dado digitado pelo usuario
+    var input = document.querySelector("input");
+    input.focus();
+
+    var button = document.querySelector("button");
+    //ao usar a função() temos o valor e ao usar função sem os () temos o código
+    //vincula o código ao clicar no botão
+    button.onclick = verifica;
+
+</script>
