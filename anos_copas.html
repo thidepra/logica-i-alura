@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var anoCopa = 1930;
+    var anoAtual = parseInt(prompt("Digite o ano vigente"));
+    var contador = 1;
+
+    while (anoCopa <= anoAtual) {
+        mostra("Teve Copa do Mundo em " + anoCopa + " .");
+        anoCopa += 4;
+        contador ++;
+    }
+
+    mostra("Até o momento tivemos " + contador + " Copas do Mundo.");
+    mostra("FIM");
+
+</script>
