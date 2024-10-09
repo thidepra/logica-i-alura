@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<input />
+<button>Compare com o meu segredo</button>
+
+<script>
+
+    var tentativas = 3;
+
+    function sorteia() {
+        var segredo = Math.round(Math.random() * 10);
+        console.log(segredo);
+        return segredo;
+    }
+
+    function verifica() {
+        if (tentativas == 0) {
+            alert("Você não tem mais tentativas");
+            return;
+        }
+        if (input.value == segredo) {
+            alert("Você acertou!!!");
+        } else {
+            tentativas--;
+            alert("Você errou!!!! Você tem mais " + tentativas + " tentativas.");
+        }
+
+        input.value = "";
+        input.focus();
+    }
+
+    var segredo = sorteia();
+    var input = document.querySelector("input");
+    input.focus();
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+
+</script>
